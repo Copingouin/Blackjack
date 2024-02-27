@@ -3,22 +3,28 @@
 //
 
 #include <iostream>
-#include "Deck.h++"
+#include <random>
+#include <algorithm>
+
+#include "Deck.hpp"
 
 Deck::Deck() {
+    int index = 0;
     currentIndex = 0;
     std::string types[4] = {HEARTS, SPADES, CLUBS, DIAMONDS};
 
     for (std::string str:types){
         for (int i = 1; i <= 13; i++) {
-            deck.emplace_back(Card(str ,i));
+            deck.push_back(Card(str ,i));
         }
 
     }
 }
 
 void Deck::shuffle() {
-
+    auto rd = std::random_device {};
+    auto rng = std::default_random_engine { rd() };
+    std::shuffle(deck.begin(), deck.end(), rng);
 }
 
 Card Deck::next() {

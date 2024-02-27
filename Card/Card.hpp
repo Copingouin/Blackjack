@@ -10,21 +10,24 @@
 
 class Card {
 public:
-    Card(std::string type, int value);
+    Card(std::string, int);
     std::string getType();
     int getValue();
+    std::string type;
+    int value;
 
-private:
-    const std::string HEARTS = "Hearts",
+
+    std::string HEARTS = "Hearts",
         SPADES = "Spades",
         DIAMONDS = "Diamonds",
         CLUBS = "Clubs";
-    std::string type;
 
-    const int K = 13,
+
+    int K = 13,
         Q = 12,
-        J = 11;
-    int value;
+        J = 11,
+        A = 1;
+
 
 };
 

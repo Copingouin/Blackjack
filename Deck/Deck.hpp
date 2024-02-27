@@ -2,11 +2,11 @@
 // Created by cedri on 2024-02-25.
 //
 
-#ifndef UNTITLED_DECK_H
-#define UNTITLED_DECK_H
+#ifndef UNTITLED_DECK_HPP
+#define UNTITLED_DECK_HPP
 
 
-#include <list>
+#include <vector>
 #include "../Card/Card.hpp"
 
 class Deck{
@@ -16,10 +16,11 @@ public:
     Card next();
     void show();
 
-private:
-    std::list<Card> deck;
+
+    std::vector<Card> deck;
     int currentIndex;
 
+private:
     const std::string HEARTS = "Hearts",
             SPADES = "Spades",
             DIAMONDS = "Diamonds",
@@ -28,4 +29,4 @@ private:
 };
 
 
-#endif //UNTITLED_DECK_H
+#endif //UNTITLED_DECK_HPP

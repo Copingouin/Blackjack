@@ -132,7 +132,7 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Deck/Deck.h++",
+			"path" : "Deck/Deck.hpp",
 			"sourceGroupIndex" : 1
 		}
 	],

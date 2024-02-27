@@ -7,4 +7,4 @@ add_executable(untitled main.cpp
         Card/Card.cpp
         Card/Card.hpp
         Deck/Deck.cpp
-        Deck/Deck.h++)
+        Deck/Deck.hpp)
