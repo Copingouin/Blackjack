@@ -7,17 +7,20 @@
 
 
 int main() {
-    /*Player player1(100);
-    Player player2(200);
 
-    std::cout << "Player" + player1.number;
-    std::cout << "Player" + player2.number;
-    */
+    Player player1(100);
+    Player player2(100);
+
     Deck deck;
-    
-    deck.show();
-    deck.shuffle();
-    deck.show();
+
+    Hand hand1(deck.next(), deck.next());
+    Hand hand2(deck.next(), deck.next());
+
+    player1.deal(hand1);
+    player2.deal(hand2);
+
+    player1.showHand();
+    player2.showHand();
 
     return 0;
 }

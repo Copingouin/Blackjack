@@ -9,4 +9,6 @@ add_executable(untitled main.cpp
         Deck/Deck.cpp
         Deck/Deck.hpp
         Player/Player.cpp
-        Player/Player.hpp)
+        Player/Player.hpp
+        Hand/Hand.cpp
+        Hand/Hand.hpp)

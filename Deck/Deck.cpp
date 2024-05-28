@@ -22,19 +22,19 @@ Deck::Deck() {
 }
 
 void Deck::shuffle() {
+    currentIndex = 0;
     auto rd = std::random_device {};
     auto rng = std::default_random_engine { rd() };
     std::shuffle(deck.begin(), deck.end(), rng);
 }
 
 Card Deck::next() {
-
-    return *std::next(deck.begin(), currentIndex);
+    return *std::next(deck.begin(), currentIndex++);
 }
 
 void Deck::show() {
     for (Card card:deck){
-        std::cout << card.getValue() << " of " << card.getType() << std::endl;
+        card.show();
     }
 }
 

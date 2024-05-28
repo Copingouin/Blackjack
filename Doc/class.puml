@@ -1,0 +1,32 @@
+@startuml
+
+class Player{
+    number : int
+    cash : int
+}
+
+class Deck{
+
+}
+
+class Card{
+    number : int
+    type : string
+}
+
+class Dealer{
+
+}
+
+class Hand{
+    /value : int
+}
+
+Player "1" --  "1..*"Hand : is dealt >
+Deck "1" -- "52" Card : is made of >
+Dealer "1" -- "1..*" Hand : deals >
+Dealer "1" -- "1..*" Player : deals to >
+Dealer "1" -- "1" Deck : picks card from >
+Dealer "1" -- "1" Hand : Receives >
+
+@enduml

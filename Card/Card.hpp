@@ -15,6 +15,7 @@ public:
     int getValue();
     std::string type;
     int value;
+    void show();
 
 
     std::string HEARTS = "Hearts",

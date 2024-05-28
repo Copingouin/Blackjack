@@ -6,16 +6,22 @@
 #define UNTITLED_PLAYER_HPP
 
 
+#include "../Hand/Hand.hpp"
+
 class Player {
 public:
     Player(int);
     void setCash(int);
     int getCash();
     int number;
+    void deal(Hand);
+    void showHand();
+
 
 private:
     static int staticNumber;
     int cash;
+    Hand hand;
 };
 
 

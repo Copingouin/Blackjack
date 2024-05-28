@@ -2,6 +2,7 @@
 // Created by cedri on 2024-02-25.
 //
 
+#include <iostream>
 #include "Card.hpp"
 
 
@@ -16,4 +17,8 @@ std::string Card::getType(){
 
 int Card::getValue(){
     return value;
+}
+
+void Card::show() {
+    std::cout << value << " of " << type << std::endl;
 }
